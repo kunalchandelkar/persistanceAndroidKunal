@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="COLOR MAKER"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/colorPreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/colorPreview"
+        android:layout_width="245dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFC107"
+        android:color="#52B1E5"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="128dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="61dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474">
+
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:switchMinWidth="80dp"
+            android:thumbTint="#FA0000"
+            android:trackTint="#FA0000"
+            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:checked="true"
+            android:switchMinWidth="80dp"
+            android:thumbTint="#00fa00"
+            android:trackTint="#00fa00" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:checked="true"
+            android:switchMinWidth="80dp"
+            android:thumbTint="#0000FA"
+            android:trackTint="#0000FA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="128dp"
+        android:layout_height="255dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="61dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="188dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:max="100"
+            android:progress="@integer/material_motion_duration_short_1"
+            android:progressTint="#FA0000"
+            android:thumbTint="#FA0000" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="188dp"
+            android:layout_height="49dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:max="100"
+            android:progress="@integer/material_motion_duration_short_1"
+            android:progressTint="#00fa00"
+            android:thumbTint="#00fa00" />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="188dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:max="100"
+            android:progress="@integer/material_motion_duration_short_1"
+            android:progressTint="#0000FA"
+            android:thumbTint="#0000FA" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="128dp"
+        android:layout_height="255dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="61dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/redInput"
+            android:layout_width="74dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints="red"
+            android:baselineAligned="false"
+            android:bottomLeftRadius="12dp"
+            android:bottomRightRadius="12dp"
+            android:hint="0.0"
+            android:topLeftRadius="12dp"
+            android:topRightRadius="12dp" />
+
+        <EditText
+            android:id="@+id/greenInput"
+            android:layout_width="79dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:autofillHints="red"
+            android:baselineAligned="false"
+            android:bottomLeftRadius="12dp"
+            android:bottomRightRadius="12dp"
+            android:hint="0.0"
+            android:topLeftRadius="12dp"
+            android:topRightRadius="12dp"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <EditText
+            android:id="@+id/blueInput"
+            android:layout_width="75dp"
+            android:layout_height="68dp"
+            android:layout_weight="1"
+            android:autofillHints="red"
+            android:baselineAligned="false"
+            android:bottomLeftRadius="12dp"
+            android:bottomRightRadius="12dp"
+            android:hint="0.0"
+            android:topLeftRadius="12dp"
+            android:topRightRadius="12dp"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="381dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="171dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="40dp"
+        android:text="RESET"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorPreview" />
+</androidx.constraintlayout.widget.ConstraintLayout>
